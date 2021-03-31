@@ -1,3 +1,4 @@
+// connects the button to the function
 document.getElementById('calculate').addEventListener('click', math)
 
 let diameter = 0
@@ -10,7 +11,6 @@ function math () {
   diameter = parseInt(diameter)
   area = 0
   circumference = 0
-  alphabet = false
 
   // this tells you not to use negative numbers
   if (diameter < 0) {
@@ -22,10 +22,11 @@ function math () {
     document.getElementById('alert').innerHTML = 'please enter a numerical value'
   }
 
-  while (diameter > 0) {
-  area = ((diameter / 2) * (diameter / 2)) * pi
-  circumference = pi * diameter
-  document.getElementById('answera').innerHTML = 'area: ' + area
-  document.getElementById('answerc').innerHTML = 'circumference: ' + circumference 
+  // this is the reason i'm going to jump off a cliff
+  if ((diameter > 0)) {
+    area = ((diameter / 2) * (diameter / 2)) * pi
+    circumference = pi * diameter
+    document.getElementById('answera').innerHTML = 'area: ' + area
+    document.getElementById('answerc').innerHTML = 'circumference: ' + circumference
   }
 }
