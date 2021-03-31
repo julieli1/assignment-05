@@ -12,21 +12,20 @@ function math () {
   area = 0
   circumference = 0
 
-  // this tells you not to use negative numbers
+  // tells you not to use negative numbers
   if (diameter < 0) {
-    document.getElementById('alert').innerHTML = 'please use positive numbers'
+    document.getElementById('answer').innerHTML = 'please use positive numbers'
   }
 
   // tells you not to use letters
   if (isNaN(diameter)) {
-    document.getElementById('alert').innerHTML = 'please enter a numerical value'
+    document.getElementById('answer').innerHTML = 'please enter a numerical value'
   }
 
-  // this is the reason i'm going to jump off a cliff
+  // does the math part
   if ((diameter > 0)) {
     area = ((diameter / 2) * (diameter / 2)) * pi
     circumference = pi * diameter
-    document.getElementById('answera').innerHTML = 'area: ' + area
-    document.getElementById('answerc').innerHTML = 'circumference: ' + circumference
+    document.getElementById('answer').innerHTML = 'area: ' + area + '\n' + 'circumference: ' + circumference
   }
 }
